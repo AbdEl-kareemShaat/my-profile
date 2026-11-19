@@ -1,0 +1,304 @@
+/* Variables */
+:root {
+  --main-color-blue: #085184;
+  --main-color-orange: #f67928;
+  --section-background: url(../images/section-background.jpg);
+  --section-padding: 50px;
+}
+/* start global rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+HTML {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 5em;
+}
+.section-title h2 {
+  color: #dfdfdfcf;
+  font-size: 700%;
+  font-weight: 800;
+  margin-bottom: 0px;
+  letter-spacing: -8px;
+}
+.section-title p {
+  color: #797979;
+  font-size: larger;
+  margin-top: -35px;
+}
+/* End global rules */
+
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+@media (max-width:767px){
+  .header .logo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  
+  .header .links{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.header .links li {
+  margin-left: 20px;
+}
+.header .links li a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--main-color-blue);
+}
+.header .links li a:hover {
+  color: var(--main-color-orange);
+}
+/* End header  */
+
+.personal-details {
+  background-image: var(--section-background);
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.personal-details .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.personal-details .my-photo {
+  max-width: 350px;
+  max-height: 350px;
+  padding: 15px;
+  background-color: var(--main-color-blue);
+  border-radius: 20%;
+  margin-left: 5%;
+}
+@media (max-width:767px){
+  .personal-details .container{
+    width: 100%;
+  }
+  .personal-details .my-photo{
+    max-width: 190px;
+    padding: 5px;
+  }
+}
+.personal-details .details {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.personal-details .details h1.my-name {
+  margin-bottom: 0px;
+  color: var(--main-color-blue);
+  position: relative;
+}
+.personal-details .details h1::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+  bottom: 0;
+  left: -2px;
+  background-color: var(--main-color-blue);
+}
+@media (max-width:767px){
+  .personal-details .details h1.my-name{
+    font-size: 27px;
+  }
+  .personal-details .details h1::before{
+    width: 100%;
+  }
+}
+.personal-details .details p.my-work {
+  margin-top: 1%;
+  color: var(--main-color-orange);
+}
+.personal-details .details p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 20px;
+}
+/* End personal details section  */
+
+.my-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.my-skills .container {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  width: 60%;
+}
+.my-skills .container img {
+  max-width: 250px;
+}
+.my-skills .container .skill-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.my-skills .container .skill-box h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--main-color-blue);
+  margin-bottom: 0%;
+}
+.my-skills .container .skill-box p {
+  margin-top: 0%;
+  color: #666;
+  opacity: 0.8;
+}
+/* End My Skills Section  */
+.my-projects {
+  background-image: var(--section-background);
+  background-size: cover;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.my-projects h3 {
+  color: var(--main-color-blue);
+  font-size: 20px;
+  font-weight: bolder;
+}
+.my-projects .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2em;
+  margin-bottom: 5%;
+}
+.my-projects .projects .project-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  box-shadow: 5px 5px 15px #666;
+}
+.my-projects .projects .project-box img {
+  max-width: 100%;
+}
+.my-projects .projects .project-box .proj-discript {
+  padding: 1em;
+  background-color: white;
+  position: relative;
+}
+.my-projects .projects .project-box .proj-discript .done-proj{
+  position: absolute;
+  width: fit-content;
+  padding: 1.5%;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  top: 30%;
+  right: 2%;
+  opacity: .6;
+}
+.my-projects .projects .project-box h4{
+  margin-bottom: 0%;
+  letter-spacing: 1.8;
+  color: var(--main-color-blue);
+  font-size: larger;
+  opacity: .6;
+  width: fit-content;
+}
+.my-projects .projects .project-box h4:hover{
+  color: var(--main-color-orange);
+}
+.my-projects .projects .project-box h4.done{
+  opacity: 1;
+}
+.my-projects .projects .project-box .proj-discript .done-proj.done{
+  opacity: 1;
+}
+.my-projects .projects .project-box p {
+  color: #666;
+}
+/* End Projects Section  */
+
+.footer{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-pading);
+}
+.footer .container{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.footer .container img{
+  max-width: 200px;
+}
+.footer .container p:first-of-type{
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--main-color-blue);
+  position: relative;
+}
+.footer .container p:first-of-type::before{
+  content: '';
+  background-color: var(--main-color-blue);
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer .container .social-icons{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer .container .social-icons li:not(:first-child){
+  margin-left: 30px;
+}
+.footer .container .social-icons li a i{
+  color: var(--main-color-blue);
+}
+.footer .container .social-icons li a i:hover{
+  color: var(--main-color-orange);
+}
+.copyright-text{
+  color: var(--main-color-blue);
+}
+.copyright-text span{
+  font-weight: bold;
+  color: var(--main-color-orange);
+}
